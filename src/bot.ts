@@ -142,6 +142,7 @@ export class ChatGPTBot {
       triggered = regEx? regEx.test(text): true;
     } else {
       triggered = this.chatGroupTriggerRegEx.test(text);
+      console.log('group triggered:', triggered);
       // group message support `chatTriggerRule`
       if (triggered && chatTriggerRule) {
         triggered = chatTriggerRule.test(text.replace(this.chatGroupTriggerRegEx, ""))
