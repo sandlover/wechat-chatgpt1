@@ -35,7 +35,8 @@ export class ChatGPTBot {
     this.botName = botName;
   }
   get chatGroupTriggerRegEx(): RegExp {
-    return new RegExp(`^@${this.botName}\\s`);
+    // return new RegExp(`^@${this.botName}\\s`);
+    return new RegExp(`^@lost\\s`);
   }
   get chatPrivateTriggerRule(): RegExp | undefined {
     const { chatPrivateTriggerKeyword, chatTriggerRule } = this;
